@@ -1,0 +1,11 @@
+/* Un poco de estilo para centrar el botón en la pantalla */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
