@@ -1,0 +1,333 @@
+/* Estilos generales del main */
+main{
+    margin-right: 10vh;
+    margin-left: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*zona de cabecera */
+.head{
+
+    border-bottom: solid 2px gainsboro;
+    margin-bottom: 4vh;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    
+}
+
+#logoIzquierdo{
+    margin-left: 10vh; 
+}
+
+#menuDerecho{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10vh;
+    align-items: center;
+    
+}
+
+#tituloCabecera
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.s{
+   
+    margin-right: 3vh;
+    font-size: 1.1em;;
+}
+
+.sCustom
+{
+    font-weight: 550;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 6px;
+}
+
+.s:hover{
+    color: rgb(110, 143, 187);
+}
+
+.sCustom:hover{
+    background-color: rgb(211, 218, 228);
+    color: black;
+}
+
+/*zona de seccion ifhone 13 */
+
+h1{
+    font-size: 2.2em;
+}
+
+#capacidad
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(109, 185, 33);
+    z-index: 1;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.imagen{
+}
+
+.contenedorPadreComprar{
+    display: flex;
+    position: relative;
+}
+
+.contenedorComprarDerecho{
+    margin-left: 5vh;
+}
+
+.resaltadoRojo{
+    font-weight: 700;
+    color: red;
+}
+
+.textDesc{
+    font-size: 1.3em;
+}
+
+.padreCompra{
+    display: flex;
+    margin-top: 40px;
+    
+}
+
+.padreOpciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 30px;
+    margin-right: 10vh;
+}
+
+.icon{
+    display: flexbox;
+    align-items: first baseline;
+}
+
+.item{
+    display:inline-block
+}
+
+.precio{
+    font-size: 1.8em;
+    font-weight:800;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding:  8px 12px;
+    color: white;
+    background: blue;
+    margin-left: 30px;
+}
+
+.btn:hover{
+    background: rgb(77, 25, 190);
+}
+
+.material-symbols-outlined{
+    font-size: 1.8em;
+    color: blue;
+    vertical-align: middle;
+}
+
+/*Seccion accesorios */
+
+.accesorios{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.padreAccesorios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cajaContenedor{
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-bottom: 3vh;
+    width: 24%;
+    height: 500px;
+    display: block;
+    overflow:hidden;
+}
+
+.cajaImagen{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.itemPequeño{
+    width: 100%;
+}
+
+.cajaTexto{
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+
+.btn2 {
+    display: inline-block;
+    border-radius: 6px;
+    padding:  8px 12px;
+    color: white;
+    background: blue;
+}
+
+.btn2.rojo{
+    display: inline-block;
+    border-radius: 6px;
+    padding:  8px 12px;
+    color: white;
+    background: red;
+}
+
+
+
+/* Sección sorteo */
+.sorteo{
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+    padding: 3vh;
+}
+
+.sorteoIzquierdo{
+    display:block;
+    width: 60%;
+}
+
+.sorteoDerecho{
+    width: 40%;
+    margin-left: 2vh;
+}
+
+.textoSorteo{
+    font-size: 1.4em;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.formulario{
+   display: flex;
+   flex-direction: column;
+   margin-left: 5vw;
+   justify-content: flex-start;
+}
+
+.h2Sorteo{
+    font-size: 2.2em;
+}
+
+.input{
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.foot{
+    margin-top: 5vh;
+    margin-right: 0;
+    margin-left: 0;
+    border-top: solid gainsboro;
+    text-align: center;
+}
+
+
+/*Media query*/
+@media screen and (max-width: 750px) {
+
+    /*Oculatamos el menu derecho al pasar a la vista movil*/
+    #menuDerecho{
+        display:none;
+    }
+
+    .contenedorPadreComprar{
+        
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+
+    .imagen{
+        width: 100%;
+    }
+
+    .padreOpciones{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;        
+    }
+
+    .padreAccesorios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accesorios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .item{
+        width:45%;
+        height: 30vw;
+    
+    }
+
+    .cajaContenedor{
+        min-width: 320px;
+        height: 20%;
+    }
+
+    .sorteo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sorteoIzquierdo{
+        width: 100%;
+    }
+
+    .sorteoDerecho{
+        width: 100%;
+    }
+
+    .formulario{
+        margin-left: 0;
+    }
+
+}
