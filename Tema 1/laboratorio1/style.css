@@ -1,0 +1,40 @@
+.secciones{
+    margin: 20pt;
+}
+
+.accordion-item{
+    background-color: rgb(105, 184, 248);
+}
+
+.accordion-button{
+    background-color: rgb(76, 91, 124);
+    color: white;
+}
+
+.btn-outline-success{
+    background-color: blue;
+    border-color: aliceblue;
+    color: white;
+}
+
+.btn-outline-success:hover {
+    background-color:rgb(212, 164, 30);
+    border-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card{
+    margin: 30pt;
+}
+
+.bg-body-tertiary {
+    background-color: rgb(76, 91, 124) !important;
+}
+
