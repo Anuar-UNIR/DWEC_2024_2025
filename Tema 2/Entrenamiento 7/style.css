@@ -1,0 +1,26 @@
+
+body {
+    margin: 10dvb;
+    background-color: bisque;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.p1 {
+    color: blue;
+    font-size: 50pt;
+}
+
+.btn-principal {
+    background-color: blue;
+    color: white;
+    padding: 20pt;
+    font-size: 20pt;
+}
+
+.btn-principal:hover {
+    background-color: blueviolet;
+}

@@ -13,8 +13,7 @@
 
     // Se añade al body
       contenedorPrincipal.appendChild(paragraph);
-      console.log("Esoty dentro")
-
+      console.log("Estoy dentro")
 
   })
 
