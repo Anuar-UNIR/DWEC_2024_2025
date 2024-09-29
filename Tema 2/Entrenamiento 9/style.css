@@ -1,0 +1,12 @@
+body {
+        font-family: Arial, sans-serif;
+}
+
+.user {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}

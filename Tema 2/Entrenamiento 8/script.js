@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
-    // Perform custom validation logic
     const nombre = document.getElementById('nombre').value;
     const edad = Number(document.getElementById('edad').value);
     const email = document.getElementById('email').value;
@@ -31,7 +30,6 @@ form.addEventListener('submit', function(event) {
         return;
     }
 
-    // If validation passes, submit the form
     form.submit();
 });
 
