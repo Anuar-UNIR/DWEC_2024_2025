@@ -1,0 +1,19 @@
+
+body{
+    margin: 50pt;
+}
+
+
+.btn{
+    padding: 10pt;
+    background-color: blue;
+    color: white;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    width: 50pt;
+}
+
+.btn:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+}
