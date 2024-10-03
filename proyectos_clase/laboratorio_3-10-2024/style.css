@@ -1,0 +1,16 @@
+
+body{
+    margin: 50pt;
+}
+
+.btn{
+    background-color: blue;
+    padding: 10pt;
+    color: white;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+
+.btn:hover{
+    background-color: blueviolet;
+}
