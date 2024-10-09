@@ -1,3 +1,24 @@
+import Cliente from "./Cliente.js";
+import Coche from "./Coche.js";
+import Persona from "./Persona.js";
+
+const miCliente = new Cliente("Ramon", "Garcia","12345678Y");
+
+
+const miCoche = new Coche("Negro", "Porsche");
+miCoche.color = "Rojo";
+
+//Podemos añadir una nueva propiedad
+miCoche.modelo = "911 carrera 4s"
+
+const miCoche2 = new Coche("Blanco", "Ferrari");
+miCoche2.modelo = "Testarrossa";
+
+const pp = new Persona("Pepe", "Llano");
+
+pp.nombreCompleto = "Paco Grande";
+
+
 var n = 1;
 
 document.addEventListener('DOMContentLoaded', function (event) {
@@ -10,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     
 
     const parrafo1 = document.createElement('p');
-    parrafo1.innerText = saludar();
+    parrafo1.innerText = `El color del coche es ${miCliente.obtenerCIF()}`;
     parrafo1.classList.add('parrafo');
 
     divP.append(parrafo1);
