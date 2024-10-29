@@ -1,0 +1,17 @@
+<section>
+  <h1> Aplicacion en Angular: Entrenamiento 5</h1>
+  <hr>
+  <app-cuenta-atras [numeroInicial]="primerContador" [color] = "arrColores[0]" (cuentaAtrasTerminada)="terminar($event)"></app-cuenta-atras>
+  <app-cuenta-atras [numeroInicial]="segundoContador" [color] = "arrColores[1]" (cuentaAtrasTerminada)="terminar($event)"></app-cuenta-atras>
+  <app-cuenta-atras [numeroInicial]="tercerContandor" [color] = "arrColores[2]" (cuentaAtrasTerminada)="terminar($event)"></app-cuenta-atras>
+
+  <hr> <br>
+  <div [style]="color">
+    <p>He terminado</p>
+  </div>
+
+
+</section>
+
+
+<router-outlet />

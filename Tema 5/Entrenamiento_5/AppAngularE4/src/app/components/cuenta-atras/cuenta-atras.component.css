@@ -1,0 +1,8 @@
+.contenedorCuenta{
+    margin-bottom: 10px;
+    text-align: center;
+    border: 2px solid gainsboro;
+    padding: 20px;
+    font-size: 200%;
+    width: 200px;
+}
