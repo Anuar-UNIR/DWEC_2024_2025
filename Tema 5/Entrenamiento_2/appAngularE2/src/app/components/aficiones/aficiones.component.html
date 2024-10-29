@@ -1,0 +1,21 @@
+<section>
+    <div>
+        <!-- Capturar los datos -->
+         <div>
+            <label for="aficion">Aficion </label>
+            <input type="text" id="aficion" placeholder="Introduce una aficion" [(ngModel)] = "newAficion.aficion">
+         </div>
+         <br>
+         <div>
+            <label for="nombre">Nombre </label>
+            <input type="text" id="nombre" placeholder="Introduce tu nombre" [(ngModel)] = "newAficion.nombre">
+         </div>
+         <br>
+         <button (click)="guardarDatos()">Guardar</button>
+    </div>
+    <hr>
+
+    <div [innerHTML]="cargarDatos()">
+        <!-- Pintar los datos -->
+    </div>
+</section>
