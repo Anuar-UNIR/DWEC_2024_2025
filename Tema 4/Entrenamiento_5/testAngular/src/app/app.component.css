@@ -1,0 +1,19 @@
+.contenedor{
+    margin: 40pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.contenedorContador{
+    width: 30%;
+    background-color: aliceblue;
+    border: 1px solid gainsboro;
+}
+
+.contenedorReloj{
+    width: 30%;
+    background-color: lightskyblue;
+    border: 1px solid gainsboro;
+}
