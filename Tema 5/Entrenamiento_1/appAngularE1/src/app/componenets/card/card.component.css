@@ -1,0 +1,18 @@
+.contenedor{
+    padding: 10px;
+    border: 1px solid gainsboro;
+    text-align: center;
+    width: 25%;
+}
+
+.azul{
+    background-color: lightblue;
+}
+
+.rojo{
+    background-color:  tomato;
+}
+
+.verde{
+    background-color: lightgreen;
+}

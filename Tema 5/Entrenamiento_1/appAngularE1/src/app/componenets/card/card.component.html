@@ -1,0 +1,13 @@
+<div class="contenedor">
+    <!-- Property binding -->
+    <h3 [class] = "colorBackground">Informacion</h3>
+    <!-- Interpolacion - one binding comunicar ts -> html -->
+    <p><strong>Nombre: </strong>{{getNombreCompleto()}}</p>
+    <span><strong>Edad: </strong></span>
+    <span>{{edad}}</span>
+</div>
+
+<hr>
+<!-- Event Binding - html -> ts -->
+<input type="text" placeholder="Introduce un texto" (input)="cargarTexto($event)">
+<p>{{texto}}</p>
