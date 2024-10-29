@@ -1,0 +1,19 @@
+.contador{
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 200px;
+
+}
+
+.rojo{
+    background-color:  tomato;
+}
+
+.verde{
+    background-color:  lightgreen;
+}
+
+.azul{
+    background-color: lightblue;
+}
