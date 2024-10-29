@@ -1,0 +1,11 @@
+figure{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 600px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+
+}
