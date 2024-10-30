@@ -1,0 +1,8 @@
+<section>
+  <h1> Aplicacion en Angular: Entrenamiento 1: Input Signals</h1>
+  <hr>
+  <!-- El email es obligatorio y siempre se debe de pasar -->
+
+  <p>Usuario activo: {{userActivo}}</p>
+  <app-card-info nombre="Anuar" apellidos="Khan Ali" email="anuarkode@gmail.com" [(activo)]="userActivo" (activoChange)="onChangeActivo()"></app-card-info>
+</section>

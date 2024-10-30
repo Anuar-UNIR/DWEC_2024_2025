@@ -1,0 +1,12 @@
+.contenedor{
+    border: 1px solid gainsboro;
+    width: 300px;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    margin-left: 10px;
+}
