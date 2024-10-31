@@ -1,0 +1,13 @@
+<h2>Lista de estudiantes</h2>
+<ul>
+    @for(estudiante of estudiantes; track estudiante.id; let par = $even ; let impar = $odd){
+        <li class="estudiante" [class.par]="par" [class.impar]="impar">
+            <span><strong>Nombre: </strong>{{estudiante.name}}</span>
+            <span><strong>    -- Edad: </strong>{{estudiante.age}}</span>
+        </li>
+    }@empty {
+        <li>No hay estudiantes en la lista</li>
+    }
+    
+</ul>
+
