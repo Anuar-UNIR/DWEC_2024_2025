@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
 export class ControlFlowSwitchComponent {
 
   roles: string[] = ["admin", "editor", "suscriptor", "otros"];
-  role: string = this.roles[1];
+  role: string = this.roles[0];
 
 }
