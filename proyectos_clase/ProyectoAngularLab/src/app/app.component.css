@@ -1,0 +1,6 @@
+section {
+    border: 2px solid gainsboro;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

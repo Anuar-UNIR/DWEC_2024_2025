@@ -1,0 +1,19 @@
+
+h3{
+    margin-left: 10px;
+}
+
+
+p{
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.contenedor{
+    margin: 20px;
+    width: 250px;
+    border: 1px solid gainsboro;
+    background-color: aliceblue;
+
+}
+
