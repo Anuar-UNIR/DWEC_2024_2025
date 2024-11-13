@@ -1,12 +1,36 @@
 <section>
     <div class="contenedor">
-        <h3>Datos de contacto</h3>
+        <h3 [class]="color">Datos de contacto</h3>
+        <h2>{{nombreCompleto()}}</h2>
         <!-- Introducción a la interpolación, one data binding -->
-        <p><strong>Nombre: </strong>{{nombre}}</p>
+        <p class="green"><strong>Nombre: </strong>{{nombre}}</p>
         <p><strong>Apellidos: </strong>{{apellidos}}</p>
         <p><strong>Edad: </strong> {{edad}}</p>
         <p><strong>Email: </strong>{{email}}</p>
         <p><strong>Carrera actual: </strong>{{carreraActual}}</p>
+        <div [innerHTML]="infoPiloto()">
+        </div>
+        <div>
+            <a [href]="ruta" [class.red]="stock" [class.green]="sended">IR A GOOGLE</a>
+            <button [innerText]="contador" [hidden]="isHidden" (click)="myOnClick()">Click me!!!</button>
+            <input type="text" (input)="pintarDorsal($event)" placeholder="Introduce tu dorsal">
+            <p>{{texto}}</p>
+        </div>
+        <hr>
+        <br>
+        <input [(ngModel)]="textoInput">
+        <p>{{textoInput}}</p>
+
     </div>
 </section>
+
+<!-- One way data binding
+ 1) Interpolacion (Done) -> {{}}
+ 2) Property binding -> [propiedadDOM]="prop/metodo ts" -> Class binding [class.red]="stock (boolean)"
+ 3) Event binding -> (click)="miMetodo()" o $event (click)="miMetodo($event)
+ 
+ 
+ Two way Data binding 
+ 1)Importar ForsModule en el ts [()] -->
+
 
