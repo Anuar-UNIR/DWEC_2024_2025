@@ -1,0 +1,28 @@
+<section>
+    <div>
+        <div>
+            <label for="aficion">Aficion:        </label>
+            <input type="text" id="aficion" placeholder="Introduce una aficion" 
+            [(ngModel)] = "newAficion.aficion">
+        </div>
+        <br>
+        <div>
+            <label for="nombre">Nombre:        </label>
+            <input type="text" id="nombre" placeholder="Introduce el nombre"
+            [(ngModel)] = "newAficion.nombre">
+        </div>
+        <br>
+        <div>
+            <label for="Nivel">Nivel: </label>
+            <input type="text" id="nivel" placeholder="Introduce tu nivel" [(ngModel)]="newAficion.nivel">
+        </div>
+        <br>
+        <button (click)="guardarDatos()">Guardar</button>
+    </div>
+
+    <hr>
+
+    <div id="listadoContainer" [innerHTML]="cargarDatos()">
+
+    </div>
+</section>
