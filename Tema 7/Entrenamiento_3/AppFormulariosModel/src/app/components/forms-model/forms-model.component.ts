@@ -15,13 +15,13 @@ export class FormsModelComponent {
   constructor() {
     this.modelForm = new FormGroup({
       name: new FormControl(null, [
-        Validators.required
+        Validators.required, Validators.minLength(3)
       ]), //donde tengo el null puedo insertar valores
-      email: new FormControl(null, []),
-      edad: new FormControl(null, []),
-      dni: new FormControl(null, []),
-      password: new FormControl(null, []),
-      repitePassword: new FormControl(null, [])
+      email: new FormControl(null, [Validators.required, Validators.email]), // Validators.pattern(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)
+      edad: new FormControl(null, [Validators.required, Validators.min(0), Validators.max(120)] ),
+      dni: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required]),
+      repitePassword: new FormControl(null, [Validators.required])
     }, []);
   }
 
@@ -29,6 +29,12 @@ export class FormsModelComponent {
     console.log(this.modelForm.value);
     this.modelForm.reset();
   
+  }
+
+  checkControl(formControlName: string, validador: string): boolean | undefined{
+
+    return this.modelForm.get(formControlName)?.hasError(validador) && this.modelForm.get(formControlName)?.touched
+    
   }
 
 }
