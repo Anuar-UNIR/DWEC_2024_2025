@@ -1,0 +1,47 @@
+<section class="container">
+
+    <div class="shadow p-5" >
+        <div>
+            <label for="nombre" class="form-label mt-3">Nombre</label>
+            <input type="text" class="form-control mt-1" id="nombre" placeholder="Introduce tu nombre" [(ngModel)] = "nuevoTrabajador.nombre" (blur)="validarCampos()">
+        </div>
+
+        <div>
+            <label for="apellidos" class="form-label mt-3">Apellidos</label>
+            <input type="text" class="form-control mt-1" id="apellidos" placeholder="Introduce tus apellidos" [(ngModel)] = "nuevoTrabajador.apellidos" (blur)="validarCampos()">
+        </div>
+
+        <div>
+            <label for="edad" class="form-label mt-3">Edad</label>
+            <input type="number" class="form-control mt-1" id="edad" placeholder="Introduce tu edad" [(ngModel)] = "nuevoTrabajador.edad" (blur)="validarCampos()">
+        </div>
+
+        <div>
+            <label for="email" class="form-label mt-3">Email</label>
+            <input type="email" class="form-control mt-1" id="email" placeholder="Introduce tu email" [(ngModel)] = "nuevoTrabajador.email" (blur)="validarCampos()">
+        </div>
+
+        <div>
+            <label for="telefono" class="form-label mt-3">Telefono</label>
+            <input type="text" class="form-control mt-1" id="telefono" placeholder="Introduce tu telefono" [(ngModel)] = "nuevoTrabajador.telefono" (blur)="validarCampos()">
+        </div>
+
+        <div>
+            <label for="cargo" class="form-label mt-3">Cargo</label>
+            <select name="cargo" id="cargo" class="form-control" [(ngModel)] = "nuevoTrabajador.cargo">
+                <option value="vacio" selected>Selecione un puesto</option>
+                <option value="Analista">Analista</option>
+                <option value="Diseñador">Diseñador</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Desarrollador">Desarrollador</option>
+            </select>
+        </div>
+
+
+        <button class="btn btn-secondary mt-5" (click)="guardarDatos($event)" [disabled]="isBtnEnable">Guardar</button>
+    </div>
+
+    <hr>
+
+    <div class="container shadow" [innerHTML]="cargarDatos()"></div>
+</section>
