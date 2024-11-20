@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms-model',
@@ -14,7 +14,9 @@ export class FormsModelComponent {
 
   constructor() {
     this.modelForm = new FormGroup({
-      name: new FormControl(null, []), //donde tengo el null puedo insertar valores
+      name: new FormControl(null, [
+        Validators.required
+      ]), //donde tengo el null puedo insertar valores
       email: new FormControl(null, []),
       edad: new FormControl(null, []),
       dni: new FormControl(null, []),
