@@ -15,12 +15,12 @@ export class FormsModelComponent {
 
     constructor() {
         this.modelForm = new FormGroup({
-            name: new FormControl(null, [Validators.required]), 
-        email: new FormControl(null, [Validators.required ]), 
-        edad: new FormControl(null, [Validators.required] ),
-        dni: new FormControl(null, [Validators.required ]), 
-        password: new FormControl(null, [Validators.required]),
-        repitePassword: new FormControl(null, [Validators.required])
+            name: new FormControl(null, [Validators.required, Validators.minLength(3)]), //donde tengo el null puedo insertar valores
+            email: new FormControl(null, [Validators.required, Validators.pattern(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)]), 
+            edad: new FormControl(null, [Validators.required, Validators.min(0), Validators.max(120)] ),
+            dni: new FormControl(null, [Validators.required, Validators.pattern(/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/)]), //this.dniValidador()
+            password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+            repitePassword: new FormControl(null, [Validators.required, Validators.minLength(5)])
         },[]);
     }
 
@@ -32,7 +32,5 @@ export class FormsModelComponent {
     checkControl(formControlName: string, validador: string): boolean | undefined{
         return this.modelForm.get(formControlName)?.hasError(validador) && this.modelForm.get(formControlName)?.touched
     }
-
-
 
 }

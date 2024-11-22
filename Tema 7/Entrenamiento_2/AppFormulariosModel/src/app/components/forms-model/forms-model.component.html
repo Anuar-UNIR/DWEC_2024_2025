@@ -1,35 +1,34 @@
 
-<h1>Formulario de tipo FormsModel</h1>
-<hr>
-
-<section class="container" mt-3>
+<section class="container mt-3" >
+    <h1>Formulario de tipo FormsModel</h1>
+    <hr>
     <form [formGroup]="modelForm" class="card p-3 shadow" (ngSubmit)="getDataForm()">
-        <div clas="my-2">
+        <div class="my-2">
             <label for="name" class="form-label">Nombre</label>
             <input type="text" class="form-control mb-3" placeholder="Introduce un nombre" id="name" formControlName="name">
         </div>
 
-        <div clas="my-2">
+        <div class="my-2">
             <label for="email" class="form-label">Email</label>
             <input type="text" class="form-control mb-3" placeholder="Introduce un email" id="email" formControlName="email">
         </div>
 
-        <div clas="my-2">
+        <div class="my-2">
             <label for="edad" class="form-label">Edad</label>
             <input type="number" class="form-control mb-3" placeholder="Introduce una edad" id="edad" formControlName="edad">
         </div>
 
-        <div clas="my-2">
+        <div class="my-2">
             <label for="dni" class="form-label">DNI</label>
             <input type="text" class="form-control mb-3" placeholder="Introduce un dni" id="dni" formControlName="dni">
         </div>
 
-        <div clas="my-2">
+        <div class="my-2">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control mb-3" placeholder="Introduce un password" id="password" formControlName="password">
         </div>
 
-        <div clas="my-2">
+        <div class="my-2">
             <label for="repitePassword" class="form-label">Repite password</label>
             <input type="password" class="form-control mb-3" placeholder="Repite el password" id="repitePassword" formControlName="repitePassword">
         </div>

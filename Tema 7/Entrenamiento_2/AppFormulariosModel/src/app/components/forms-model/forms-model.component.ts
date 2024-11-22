@@ -14,7 +14,7 @@ export class FormsModelComponent {
 
   constructor() {
     this.modelForm = new FormGroup({
-      name: new FormControl(null, []), //donde tengo el null puedo insertar valores
+      name: new FormControl(null, []), 
       email: new FormControl(null, []),
       edad: new FormControl(null, []),
       dni: new FormControl(null, []),
