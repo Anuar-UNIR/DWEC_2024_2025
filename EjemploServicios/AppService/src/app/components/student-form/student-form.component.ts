@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { StudentServiceService } from '../../services/student-service.service';
 
 @Component({
   selector: 'app-student-form',
@@ -11,6 +12,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 export class StudentFormComponent {
 
   registerStudents: FormGroup;
+  studentServices = inject(StudentServiceService);
 
   constructor() {
     this.registerStudents = new FormGroup({
@@ -23,7 +25,9 @@ export class StudentFormComponent {
 
   
   getDataForm() {
-
+    let mensaje: string = this.studentServices.insert(this.registerStudents.value);
+    alert(mensaje);
+    this.registerStudents.reset();
   }
 
 }
