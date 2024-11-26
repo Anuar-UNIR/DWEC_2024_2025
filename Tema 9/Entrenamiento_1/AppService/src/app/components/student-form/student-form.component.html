@@ -1,0 +1,29 @@
+
+<section class="container mt-3">
+    <h6>Formulario de registro</h6>
+    <hr>
+    <form [formGroup]="registerStudents" (ngSubmit)="getDataForm()">
+        <div>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre" class="form-control">
+        </div>
+
+        <div>
+            <label for="edad" class="form-label">Edad</label>
+            <input type="text" id="edad" formControlName="edad" class="form-control">
+        </div>
+
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input type="text" id="email" formControlName="email" class="form-control">
+        </div>
+
+        <div>
+            <label for="curso" class="form-label">Curso</label>
+            <input type="text" id="curso" formControlName="name" class="form-control">
+        </div>
+
+        <input type="submit" class="btn btn-danger mt-3" value="Guardar">
+    </form>
+
+</section>
