@@ -29,4 +29,10 @@ export class SeriesService {
   getById(id: string): Promise<ISerie>{
     return lastValueFrom(this.httpClient.get<ISerie>(`${this.baseUrl}/${id}`));
   }
+
+  //promises
+  delete(id: string): Promise<ISerie> {
+    return lastValueFrom(this.httpClient.delete<ISerie>(`${this.baseUrl}/${id}`));
+  }
+
 }
