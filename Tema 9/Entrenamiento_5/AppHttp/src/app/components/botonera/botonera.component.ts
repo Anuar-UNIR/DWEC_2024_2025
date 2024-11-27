@@ -13,7 +13,7 @@ export class BotoneraComponent {
 
   seriesService = inject(SeriesService);
 
-  @Input() miId: string = "";
+  @Input() miId: string | undefined;
   @Input() parent: string = "";
 
   async borrarSerie(id: string) {
