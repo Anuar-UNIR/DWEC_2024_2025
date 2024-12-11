@@ -1,0 +1,20 @@
+<section class="container mt-5">
+  <h1 class="text-center"> Aplicacion en Angular: Ejemplo Input y Output</h1>
+  <hr>
+
+  <app-cuenta-atras [numeroInicial]="primerContador" [color]="arrColores[0]" (cuentaAtrasTerminada) = "terminar($event)"></app-cuenta-atras>
+
+  <app-cuenta-atras [numeroInicial]="segundoContador" [color]="arrColores[1]" (cuentaAtrasTerminada) = "terminar($event)"></app-cuenta-atras>
+
+  <app-cuenta-atras [numeroInicial]="tercerContador" (cuentaAtrasTerminada) = "terminar($event)"></app-cuenta-atras>
+
+  <!-- <app-cuenta-atras ></app-cuenta-atras> -->
+
+</section>
+
+<section class="container mt-5">
+  <hr>
+  <div [style]="color">
+    <p>He terminado</p>
+  </div>
+</section>
