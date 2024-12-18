@@ -1,0 +1,14 @@
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu a{
+    display: inline-block;
+    background-color: lightblue;
+    color: blue;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}

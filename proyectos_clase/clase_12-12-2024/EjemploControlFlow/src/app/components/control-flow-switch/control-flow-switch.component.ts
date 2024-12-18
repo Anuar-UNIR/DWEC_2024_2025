@@ -9,7 +9,18 @@ import { Component } from '@angular/core';
 })
 export class ControlFlowSwitchComponent {
 
-  roles: string[] = ["admin", "editor", "suscriptor", "otros"];
-  role: string = this.roles[7];
+  roles: string[];
+  role: string;
+
+  constructor() {
+    this.roles = ["admin", "editor", "suscriptor", "otros"];
+    this.role = this.roles[8];
+  }
+
+  ngOnInit(): void{
+    //Llamadas al servicio
+
+    
+  }
 
 }

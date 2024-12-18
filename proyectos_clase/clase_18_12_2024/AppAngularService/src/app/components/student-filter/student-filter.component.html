@@ -1,0 +1,12 @@
+<form #filterForm="ngForm" (ngSubmit)="getDataFilter(filterForm)">
+    <div class="d-flex gap-2">
+        <select name="curso" id="curso" class="form-select" ngModel>
+            <option value="">Seleccione un curso</option>
+            @for(curso of cursos; track curso.titulo){
+                <option [value]="curso.valor">{{curso.titulo}}</option>
+            }
+        </select>
+        <input class="btn btn-danger btn-sm" type="submit" value="Filtrar">
+    </div>
+
+</form>

@@ -1,0 +1,22 @@
+<nav>
+    <ul class="menu">
+        @switch (role) {
+            @case ('admin') {
+                <li><a href="">Crear nuevo</a></li>
+                <li><a href="">Ver Listado</a></li>
+                <li><a href="">Crear usuario</a></li>
+                <li><a href="">Borrar usuario</a></li>
+            }
+            @case ('editor') {
+                <li><a href="">Crear nuevo</a></li>
+                <li><a href="">Ver Listado</a></li>
+            }
+            @case ('suscriptor') {
+                <li><a href="">Ver Listado</a></li>
+            }
+            @default {
+                <p>No tienes permisos para ver el contenido</p>
+            }
+        }
+    </ul>
+</nav>
