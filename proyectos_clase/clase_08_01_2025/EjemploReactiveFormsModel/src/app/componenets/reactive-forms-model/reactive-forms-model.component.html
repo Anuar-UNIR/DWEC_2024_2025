@@ -3,36 +3,75 @@
     <form [formGroup]="modelForm" (ngSubmit)="getDataForm()" class="card p-3 shadow">
         <div class="my-2">
             <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control mb-3" placeholder="Introduce un nombre" id="name" formControlName="name">
+            <input type="text" class="form-control mb-1" placeholder="Introduce un nombre" id="name" formControlName="name">
+            @if(checkControl('name', 'required')){
+                <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('name', 'minlength')){
+                <p class="error">El nombre debe de tener al menos 3 caracteres</p>
+            }
         </div>
 
         <div class="my-2">
             <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-control mb-3" placeholder="Introduce un email" id="email" formControlName="email">
+            <input type="text" class="form-control mb-1" placeholder="Introduce un email" id="email" formControlName="email">
+            @if(checkControl('email', 'required')){
+                <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('email', 'pattern')){
+                <p class="error">Formato incorrecto para el email</p>
+            }
         </div>
 
         <div class="my-2">
             <label for="edad" class="form-label">Edad</label>
-            <input type="number" class="form-control mb-3" placeholder="Introduce una edad" id="edad" formControlName="edad">
+            <input type="number" class="form-control mb-1" placeholder="Introduce una edad" id="edad" formControlName="edad">
+            @if(checkControl('edad', 'required')){
+            <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('edad', 'min') || checkControl('edad', 'max')){
+                <p class="error">El valor de la edad no esta dentro de los limites 0-120</p>
+            }
         </div>
 
         <div class="my-2">
             <label for="dni" class="form-label">DNI</label>
-            <input type="text" class="form-control mb-3" placeholder="Introduce un dni" id="dni" formControlName="dni">
+            <input type="text" class="form-control mb-1" placeholder="Introduce un dni" id="dni" formControlName="dni">
+            @if(checkControl('dni', 'required')){
+            <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('dni','pattern')){
+            <p class="error">El dni no tiene el formato correcto</p>
+            }
         </div>
 
         <div class="my-2">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Introduce un password" id="password"
+            <input type="password" class="form-control mb-1" placeholder="Introduce un password" id="password"
                 formControlName="password">
+            @if(checkControl('password', 'required')){
+            <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('password','minlength')){
+            <p class="error">La contraseña debe de tener al menos 5 caracteres</p>
+            }
         </div>
         
         <div class="my-2">
             <label for="repitePassword" class="form-label">Repite password</label>
-            <input type="password" class="form-control mb-3" placeholder="Repite el password" id="repitePassword"
+            <input type="password" class="form-control mb-1" placeholder="Repite el password" id="repitePassword"
                 formControlName="repitePassword">
+            @if(checkControl('repitePassword', 'required')){
+            <p class="error">Campo requerido</p>
+            }
+            @if(checkControl('repitePassword','minlength')){
+            <p class="error">La contraseña debe de tener al menos 5 caracteres</p>
+            }
+            @if(modelForm.hasError('passwordnotmatches')){
+            <p class="error">Las contraseñas no coinciden</p>
+            }
         </div>
         
-        <input type="submit" value="Enviar" class="btn btn-secondary">
+        <input type="submit" value="Enviar" class="btn btn-secondary" [disabled]="!modelForm.valid">
     </form>
 </section>
