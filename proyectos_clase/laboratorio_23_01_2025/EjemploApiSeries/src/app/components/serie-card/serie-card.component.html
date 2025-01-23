@@ -1,0 +1,16 @@
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="miSerie.image" [alt]="miSerie.title" class="img-fluid rounded-start">
+        </div>
+
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{miSerie.title}}</h5>
+                <p class="card-text">{{miSerie.channel}}</p>
+                <p class="card-text"><small class="text-body-secondary">{{miSerie.creator}}</small></p>
+            </div>
+        </div>
+        <button class="btn btn-danger mt-3" (click)="deleteSerie(miSerie)">Eliminar</button>
+    </div>
+</div>

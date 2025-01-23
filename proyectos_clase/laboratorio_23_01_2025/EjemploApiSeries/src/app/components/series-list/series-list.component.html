@@ -1,0 +1,11 @@
+
+<div class="row">
+    @for (serie of arrSeries; track serie.id) {
+        <article class="col-12 col-md-6 col-sm-3">
+            <app-serie-card [miSerie]="serie"></app-serie-card>
+        </article>
+    }
+    @empty {
+        <h2>NO HAY DATOS PARA MOSTRAR</h2>
+    }
+</div>
