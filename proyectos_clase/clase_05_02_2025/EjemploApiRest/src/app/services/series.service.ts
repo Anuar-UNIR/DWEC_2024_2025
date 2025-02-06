@@ -29,5 +29,22 @@ export class SeriesService {
     return this.httpClient.get<Serie>(`${this.baseUrl}/${_id}`);
   }
 
+  insertObservable(serie: Serie): Observable<Serie>{
+    return this.httpClient.post<Serie>(this.baseUrl, serie)
+  }
+
+
+  insert(serie: Serie): Promise<Serie>{
+    return lastValueFrom(this.httpClient.post<Serie>(this.baseUrl, serie));
+  }
+
+  update(serie: Serie): Promise<Serie> {
+    return lastValueFrom(this.httpClient.put<Serie>(this.baseUrl + "/" +serie._id, serie));
+  }
+
+  delete(_id: string): Promise<Serie> {
+    return lastValueFrom(this.httpClient.delete<Serie>(`${this.baseUrl}/${_id}`));
+  }
+
 
 }
