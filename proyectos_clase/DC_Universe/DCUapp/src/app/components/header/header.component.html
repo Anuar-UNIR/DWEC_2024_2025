@@ -1,0 +1,32 @@
+<header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="mainNav">
+        <div class="container-fluid">
+            <a class="navbar-brand js-scroll-trigger" [routerLink]="['/characters']">
+                <img src="/logo.webp" width="55px">
+            </a>
+            <h2 class="text-white">DC Studios</h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/characters']" routerLinkActive="active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown  main-menu">
+                        <a class="nav-link dropdown-toggle" href="#" routerLinkActive="active">Nuestros Supers</a>
+                        <div class="dropdown-menu main-menubox" aria-labelledby="navbarDropdown">
+                            @for (hero of heroList; track $index) {
+                            <a class="dropdown-item" [routerLink]="['/details', hero.id]">{{hero.heroname}}</a>
+                            }
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['character/new']" routerLinkActive="active">Heroe Nuevo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
