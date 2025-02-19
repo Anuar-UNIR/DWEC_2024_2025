@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  
+
   router = inject(Router);
 
-  logout() {
+  logout(): void {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
   }
 
 }
